@@ -22,7 +22,7 @@ class PagesController < ApplicationController
       render :contact
     else    
       ContactMailer.contact_message(@name,@email,@message).deliver_now
-      redirect_to root_path, notice: "Your message was sent. Thank you."
+      redirect_to root_path, notice: "Votre message a bien été envoyé. Merci! "
     end
   end
 
